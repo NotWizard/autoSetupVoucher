@@ -9,27 +9,28 @@ from selenium import webdriver
 import time
 
 # 1-满减券 2-折扣券 3-立减券 4-包邮券
-voucherType = 2
-voucherSetCount = 29
+voucherType = 1
+# 创建多少张优惠券
+voucherSetCount = 2
 
-# voucherValue = 200
-# voucherThreshold = 1000
-# voucherName_CN = "满RM1000减RM200"
-# voucherName_EN = "Buy RM1000 get RM200 off"
-# voucherCount = 30
-# voucherForOnePerson = 1
-# voucherForOneDay = voucherCount
-# voucherDesName_CN = "社群晒单狂撒券"
-# voucherDesName_EN = "Giveaway for group chats"
-
-voucherDiscount = 8
-voucherName_CN = "8折券"
-voucherName_EN = "20% Off"
-voucherCount = 50
+voucherValue = 5
+voucherThreshold = 5
+voucherName_CN = "满RM5减RM5"
+voucherName_EN = "Buy RM5 get RM5 off"
+voucherCount = 5
 voucherForOnePerson = 1
 voucherForOneDay = voucherCount
 voucherDesName_CN = "社群晒单狂撒券"
 voucherDesName_EN = "Giveaway for group chats"
+
+# voucherDiscount = 8
+# voucherName_CN = "8折券"
+# voucherName_EN = "20% Off"
+# voucherCount = 50
+# voucherForOnePerson = 1
+# voucherForOneDay = voucherCount
+# voucherDesName_CN = "社群晒单狂撒券"
+# voucherDesName_EN = "Giveaway for group chats"
 
 
 def setRebateVoucher():
@@ -83,13 +84,9 @@ def setRebateVoucher():
 
     # 输入优惠券会员级别
     chromeBrowser.find_element_by_xpath('//*[@class="el-form el-form--label-right"]/div[12]/div/div/label/span/span').click()
-    time.sleep(1)
     chromeBrowser.find_element_by_xpath('//*[@class="el-form el-form--label-right"]/div[12]/div/div/label[2]/span/span').click()
-    time.sleep(1)
     chromeBrowser.find_element_by_xpath('//*[@class="el-form el-form--label-right"]/div[12]/div/div/label[3]/span/span').click()
-    time.sleep(1)
     chromeBrowser.find_element_by_xpath('//*[@class="el-form el-form--label-right"]/div[12]/div/div/label[4]/span/span').click()
-    time.sleep(1)
 
     # 输入优惠券中文描述
     chromeBrowser.find_element_by_xpath('//*[@class="el-form el-form--label-right"]/div[13]/div/div/textarea').send_keys(voucherDesName_CN)
@@ -155,13 +152,9 @@ def setDiscountVoucher():
 
     # 输入优惠券会员级别
     chromeBrowser.find_element_by_xpath('//*[@class="el-form el-form--label-right"]/div[12]/div/div/label/span/span').click()
-    time.sleep(1)
     chromeBrowser.find_element_by_xpath('//*[@class="el-form el-form--label-right"]/div[12]/div/div/label[2]/span/span').click()
-    time.sleep(1)
     chromeBrowser.find_element_by_xpath('//*[@class="el-form el-form--label-right"]/div[12]/div/div/label[3]/span/span').click()
-    time.sleep(1)
     chromeBrowser.find_element_by_xpath('//*[@class="el-form el-form--label-right"]/div[12]/div/div/label[4]/span/span').click()
-    time.sleep(1)
 
     # 输入优惠券中文描述
     chromeBrowser.find_element_by_xpath('//*[@class="el-form el-form--label-right"]/div[13]/div/div/textarea').send_keys(voucherDesName_CN)
